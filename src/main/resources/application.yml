@@ -1,0 +1,66 @@
+spring:
+  application:
+    name: "help-desk-backend"
+
+  # Database Configurations
+  datasource:
+    url: jdbc:mysql://localhost:3306/help-desk-backend
+    username: root
+    password: root123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # JPA / Hibernate Configurations
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+  # --- CORRECTED CONFIGURATION BELOW ---
+  ai:
+    google:
+      genai:
+        api-key: ${GOOGLE_GENAI_KEY}
+        project-id: ${GOOGLE_PROJECT_ID}
+        region: us-central1
+        chat:
+          options:
+            model: gemini-2.5-flash-lite
+
+      chat:
+        memory:
+          repository:
+            jdbc:
+              initialize-schema: always
+
+  sql:
+    init:
+      mode: always
+server:
+  port: 8081
+
+
+# Move this to the far left (Root Level)
+logging:
+   level:
+     org.springframework.ai: DEBUG
+     com.substring.helpdesk: DEBUG
+
+
+
+
+
+
+
+
+
+# Chat model (Google GenAI)
+
+#google:
+#  genai:
+#    api-key: ${API_KEY} (Add your Google GenAI API key here)
+#    project-id: ${PROJECT_ID} # (Add your Google GenAI project ID here)
+#    region: us-central1  (Add your Google GenAI region here. example: us-central1)
+#    model: {MODEL_NAME} (Add the Gemini model name here. example: gemini-2.5-flash)
