@@ -15,13 +15,13 @@ The system is built to reflect how real enterprise support platforms work, where
 ## 📸 Screenshots
 
 ### 💬 AI Support Assistant
-![AI Chat](src/screenshots/Help_Desk_Home_Page.png)
+![AI Chat](screenshots/Help_Desk_Home_Page.png)
 
 ### 🏠 Support Dashboard
-![Dashboard](src/screenshots/Help_Desk_1.png)
+![Dashboard](screenshots/Help_Desk_1.png)
 
 ### 📊 Ticket Tracking View
-![Ticket Status](src/screenshots/Help_Desk_2.png)
+![Ticket Status](screenshots/Help_Desk_2.png)
 
 ## 🎯 Why This Project Matters
 Customer support systems often struggle with delayed responses and high manual workload. This backend demonstrates how AI-assisted automation and structured ticket workflows can significantly improve support efficiency while maintaining data reliability and system scalability.
